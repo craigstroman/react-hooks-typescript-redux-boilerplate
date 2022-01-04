@@ -35,7 +35,7 @@ const webpackConfig = (): Configuration => ({
     ],
   },
   devServer: {
-    port: 3000,
+    port: 4000,
     historyApiFallback: true,
     hot: true,
   },
