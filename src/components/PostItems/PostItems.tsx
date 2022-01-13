@@ -26,7 +26,9 @@ export const PostItems: React.FC<PostItemsProps> = ({
     <ul className="posts">
       {posts.map((post) => (
         <li key={post.id}>
-          <Link to={`/post/${post.id}`}>{post.title}</Link>
+          <Link to={`/post/${post.id}`} className="posts__link">
+            {post.title}
+          </Link>
         </li>
       ))}
     </ul>
