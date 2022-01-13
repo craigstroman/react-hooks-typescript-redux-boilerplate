@@ -29,8 +29,8 @@ const webpackConfig = (): Configuration => ({
         exclude: /build/,
       },
       {
-        test: /\.s?css$/,
-        use: ['style-loader', 'css-loader'],
+        test: /\.(scss|css)$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
     ],
   },
