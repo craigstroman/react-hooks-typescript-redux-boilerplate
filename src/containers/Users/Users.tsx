@@ -3,6 +3,7 @@ import { AppDispatch } from '../../app/store';
 import { useAppSelector } from '../../app/hooks';
 import { useDispatch } from 'react-redux';
 import { usersState, getUsersAsync } from './usersSlice';
+import { UserItems } from '../../components/UserItems/UserItems';
 
 export const Users: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -12,11 +13,15 @@ export const Users: React.FC = () => {
     dispatch(getUsersAsync());
   }, [dispatch]);
 
-  console.log('newUsersState: ', newUsersState);
-
   useEffect(() => {
     handleGetUsers();
   }, [handleGetUsers]);
 
-  return <div>Users</div>;
+  return (
+    <UserItems
+      loading={newUsersState.status === 'success' ? false : true}
+      error={newUsersState.status !== 'success' ? newUsersState.status : ''}
+      users={newUsersState.value}
+    />
+  );
 };
