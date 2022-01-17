@@ -25,7 +25,7 @@ export const PostItems: React.FC<PostItemsProps> = ({
   return (
     <ul className="posts">
       {posts.map((post) => (
-        <li key={post.id}>
+        <li key={`${post.id}-${Math.random() * 10}`}>
           <Link to={`/post/${post.id}`} className="posts__link">
             {post.title}
           </Link>
