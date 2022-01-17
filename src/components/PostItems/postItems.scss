@@ -1,7 +1,8 @@
 .posts {
+  font-size: 1.5em;
   list-style-type: none;
-
   li {
+    margin-bottom: 20px;
     .posts__link {
       text-decoration: none;
       &:hover {
