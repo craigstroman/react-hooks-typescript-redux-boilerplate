@@ -26,7 +26,15 @@ export const UserItems: React.FC<UserItemsProps> = ({
     <ul className="users">
       {users.map((user) => (
         <li key={`${user.id}-${Math.random() * 10}`}>
-          <Link to={`/user/${user.id}`} className="users__link">
+          <Link
+            to={{
+              pathname: `/user/${user.id}`,
+              state: {
+                user,
+              },
+            }}
+            className="users__link"
+          >
             {user.name}
           </Link>
         </li>
