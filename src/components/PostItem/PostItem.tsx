@@ -10,8 +10,8 @@ interface IPost {
 }
 
 export const PostItem: React.FC = () => {
-  const post: IPost = useLocation();
-  const { state } = post;
+  const postState: IPost = useLocation();
+  const { state } = postState;
   const { body } = state;
   const { title } = state;
 
