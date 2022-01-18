@@ -1,0 +1,21 @@
+.user {
+  font-size: 1em;
+  font-family: Arial, Helvetica, sans-serif;
+  .user__info {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    margin-bottom: 10px;
+    .user__info--label {
+      font-weight: bold;
+    }
+    .user__info--item {
+      a {
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
