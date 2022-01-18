@@ -5,6 +5,7 @@ import { Dashboard } from '../Dashboard/Dashboard';
 import { Posts } from '../Posts/Posts';
 import { Users } from '../Users/Users';
 import { PostItem } from '../../components/PostItem/PostItem';
+import { UserItem } from '../../components/UserItem/UserItem';
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <Route exact path="/posts" component={Posts} />
       <Route exact path="/post/:id" component={PostItem} />
       <Route exact path="/users" component={Users} />
+      <Route exact path="/user/:id" component={UserItem} />
     </Switch>
   );
 };
