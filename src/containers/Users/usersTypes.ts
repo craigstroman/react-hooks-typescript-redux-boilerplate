@@ -8,11 +8,11 @@ export interface IUsers {
     street: string;
     suite: string;
     zipcode: string;
-    company: {
-      bs: string;
-      catchPhrase: string;
-      name: string;
-    };
+  };
+  company: {
+    bs: string;
+    catchPhrase: string;
+    name: string;
   };
   email: string;
   id: number;
